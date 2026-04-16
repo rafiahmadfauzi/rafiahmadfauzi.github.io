@@ -1,114 +1,130 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Portofolio Rafi Ahmad Fauzi</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Rafi Ahmad Fauzi</title>
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  background: #0f172a;
-  color: #e2e8f0;
-}
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #333;
+            margin: 0;
+            line-height: 1.7;
+        }
 
-.container{
-  max-width:1000px;
-  margin:auto;
-  padding:40px 20px;
-}
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 40px 20px;
+        }
 
-.hero{
-  display:flex;
-  align-items:center;
-  gap:30px;
-  flex-wrap:wrap;
-  margin-bottom:40px;
-}
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
 
-.hero img{
-  width:160px;
-  height:160px;
-  object-fit:cover;
-  border-radius:50%;
-  border:4px solid #38bdf8;
-  box-shadow:0 0 25px rgba(56,189,248,0.5);
-}
+        .header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
 
-h1{
-  font-size:40px;
-  margin-bottom:8px;
-}
+        h1 {
+            margin: 10px 0 5px;
+            font-size: 28px;
+        }
 
-.subtitle{
-  color:#38bdf8;
-  font-size:18px;
-}
+        h2 {
+            font-size: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
 
-.card{
-  background:#1e293b;
-  padding:25px;
-  border-radius:14px;
-  margin-bottom:25px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.3);
-}
+        p, li {
+            font-size: 15px;
+        }
 
-.card h2{
-  color:#38bdf8;
-  margin-bottom:12px;
-}
+        ul {
+            padding-left: 20px;
+        }
 
-ul{padding-left:20px;line-height:28px}
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 14px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+        }
 
-.footer{
-  text-align:center;
-  margin-top:40px;
-  opacity:0.6;
-}
-</style>
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 13px;
+            color: #777;
+        }
+    </style>
 </head>
-
 <body>
-<div class="container">
 
-  <div class="hero">
-    <img src="foto.jpg" alt="Foto Rafi">
-    <div>
-      <h1>Rafi Ahmad Fauzi</h1>
-      <div class="subtitle">
-        Fresh Graduate PPLG (Pengembangan Perangkat Lunak dan Gim)
-      </div>
+    <div class="container">
+
+        <div class="header">
+            <!-- Ganti foto.jpg dengan foto kamu -->
+            <img src="foto.jpg" alt="Foto Rafi">
+            <h1>Rafi Ahmad Fauzi</h1>
+            <p>Fresh Graduate PPLG (Pengembangan Perangkat Lunak dan Gim)</p>
+        </div>
+
+        <h2>Tentang Saya</h2>
+        <p>
+            Lulusan SMK jurusan Pengembangan Perangkat Lunak dan Gim dengan pengalaman Praktik Kerja Lapangan (PKL)
+            di Kementerian Agama Kabupaten Cianjur. Terbiasa menggunakan komputer untuk pekerjaan administrasi,
+            pengolahan data, dan aplikasi perkantoran. Teliti, disiplin, dan cepat belajar.
+        </p>
+
+        <h2>Tujuan Karir</h2>
+        <p>
+            Siap bekerja di bidang administrasi atau staf kantor dengan memanfaatkan kemampuan komputer
+            dan pengolahan data yang dimiliki.
+        </p>
+
+        <h2>Pendidikan</h2>
+        <p>SMK Negeri 1 Karangtengah — PPLG (2023–2026)</p>
+
+        <h2>Pengalaman PKL</h2>
+        <ul>
+            <li>Mengelola data administrasi menggunakan aplikasi perkantoran</li>
+            <li>Input dan pengolahan data dokumen</li>
+            <li>Membantu pekerjaan administrasi harian</li>
+        </ul>
+
+        <h2>Keahlian</h2>
+        <ul>
+            <li>Microsoft Word, Excel, PowerPoint</li>
+            <li>Pengolahan data administrasi</li>
+            <li>Dasar HTML & CSS</li>
+            <li>Kerja tim dan komunikasi</li>
+        </ul>
+
+        <h2>Kontak</h2>
+        <p>Email: kirafsya14@gmail.com</p>
+        <p>WhatsApp: 083817101208</p>
+        <!-- Ganti cv.pdf dengan file CV kamu -->
+        <a href="cv.pdf" class="btn" download>Download CV</a>
+
+        <footer>
+            © 2026 Rafi Ahmad Fauzi
+        </footer>
+
     </div>
-  </div>
 
-  <div class="card">
-    <h2>Tentang Saya</h2>
-    <p>
-       Lulusan SMK jurusan Pengembangan Perangkat Lunak dan Gim dengan pengalaman Praktik Kerja Lapangan (PKL) di Kementerian Agama Kabupaten Cianjur. Terbiasa menggunakan komputer untuk pekerjaan administrasi, pengolahan data, dan tugas berbasis aplikasi perkantoran. Memiliki ketelitian, kedisiplinan, kemampuan belajar yang cepat, serta mampu bekerja secara individu maupun dalam tim.
-    </p>
-  </div>
-
-  <div class="card">
-    <h2>Keahlian</h2>
-    <ul>
-      <li>Komputer Dasar</li>
-      <li>Kerja sama tim</li>
-      <li>Teliti dan disiplin</li>
-      <li>Dasar Pengembangan Web</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>Kontak</h2>
-    <p>Email: kirafsya14@gmail.com</p>
-    <p>WhatsApp: 083817101208</p>
-  </div>
-
-  <div class="footer">
-    © 2026 Rafi Ahmad Fauzi
-  </div>
-
-</div>
 </body>
 </html>
