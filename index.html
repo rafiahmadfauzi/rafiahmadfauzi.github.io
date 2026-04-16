@@ -1,57 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Portofolio Rafi Ahmad Fauzi</title>
+
 <style>
+*{margin:0;padding:0;box-sizing:border-box}
 body{
-  margin:0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(120deg,#1f1f1f,#3a3a3a);
-  color:white;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
 }
+
 .container{
-  max-width:900px;
+  max-width:1000px;
   margin:auto;
   padding:40px 20px;
 }
-.card{
-  background:#2b2b2b;
-  padding:30px;
-  border-radius:12px;
-  margin-bottom:20px;
+
+.hero{
+  display:flex;
+  align-items:center;
+  gap:30px;
+  flex-wrap:wrap;
+  margin-bottom:40px;
 }
-h1{margin:0;font-size:36px}
-h2{margin-top:0;color:#00d9ff}
-ul{padding-left:20px}
+
+.hero img{
+  width:160px;
+  height:160px;
+  object-fit:cover;
+  border-radius:50%;
+  border:4px solid #38bdf8;
+  box-shadow:0 0 25px rgba(56,189,248,0.5);
+}
+
+h1{
+  font-size:40px;
+  margin-bottom:8px;
+}
+
+.subtitle{
+  color:#38bdf8;
+  font-size:18px;
+}
+
+.card{
+  background:#1e293b;
+  padding:25px;
+  border-radius:14px;
+  margin-bottom:25px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card h2{
+  color:#38bdf8;
+  margin-bottom:12px;
+}
+
+ul{padding-left:20px;line-height:28px}
+
 .footer{
   text-align:center;
   margin-top:40px;
-  opacity:0.7;
+  opacity:0.6;
 }
 </style>
 </head>
-<body>
 
+<body>
 <div class="container">
 
-  <div class="card">
-    <h1>Rafi Ahmad Fauzi</h1>
-    <p>Fresh Graduate PPLG (Pengembangan Perangkat Lunak dan Gim)</p>
+  <div class="hero">
+    <img src="foto.jpg" alt="Foto Rafi">
+    <div>
+      <h1>Rafi Ahmad Fauzi</h1>
+      <div class="subtitle">
+        Fresh Graduate PPLG (Pengembangan Perangkat Lunak dan Gim)
+      </div>
+    </div>
   </div>
 
   <div class="card">
     <h2>Tentang Saya</h2>
-    <p>Saya lulusan SMK jurusan PPLG yang memiliki minat di bidang pengembangan web. Terbiasa menggunakan HTML, CSS, dan dasar komputer dengan baik.</p>
+    <p>
+      Saya lulusan SMK jurusan PPLG yang memiliki minat di bidang pengembangan web.
+      Terbiasa menggunakan HTML, CSS, dan dasar komputer dengan baik serta siap belajar teknologi baru.
+    </p>
   </div>
 
   <div class="card">
     <h2>Keahlian</h2>
     <ul>
       <li>HTML & CSS</li>
-      <li>Dasar Komputer</li>
       <li>Dasar Pengembangan Web</li>
+      <li>Komputer Dasar</li>
     </ul>
   </div>
 
@@ -66,6 +110,5 @@ ul{padding-left:20px}
   </div>
 
 </div>
-
 </body>
 </html>
