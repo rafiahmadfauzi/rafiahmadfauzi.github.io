@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kasir Sederhana</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">  <div class="max-w-6xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-6">🧾 Kasir Sederhana</h1><div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  
+  <!-- Produk -->
+  <div class="bg-gray-50 p-4 rounded-2xl shadow">
+    <h2 class="text-xl font-semibold mb-4">Daftar Produk</h2>
+    <div id="product-list" class="space-y-2"></div>
+  </div>
+
+  <!-- Keranjang -->
+  <div class="bg-gray-50 p-4 rounded-2xl shadow">
+    <h2 class="text-xl font-semibold mb-4">Keranjang</h2>
+    <div id="cart" class="space-y-2"></div>
+    <hr class="my-4">
+    <p class="text-lg">Total: <span id="total">Rp 0</span></p>
+    <button onclick="checkout()" class="mt-4 w-full bg-black text-white py-2 rounded-xl hover:opacity-80">Checkout</button>
+  </div>
+
+</div>
+
+  </div><script>
+const products = [
+  { id: 1, name: 'Kopi', price: 15000 },
+  { id: 2, name: 'Teh', price: 10000 },
+  { id: 3, name: 'Roti', price: 20000 },
+];
+
+let cart = [];
+
+function renderProducts() {
+  const container = document.getElementById('product-list');
+  container.innerHTML = '';
+
+  products.forEach(p => {
+    const el = document.createElement('div');
+    el.className = 'flex justify-between items-center bg-white p-3 rounded-xl shadow-sm';
+    el.innerHTML = `
+      <div>
+        <p class="font-medium">${p.name}</p>
+        <p class="text-sm text-gray-500">Rp ${p.price}</p>
+      </div>
+      <button onclick="addToCart(${p.id})" class="bg-black text-white px-3 py-1 rounded-lg">+</button>
+    `;
+    container.appendChild(el);
+  });
+}
+
+function addToCart(id) {
+  const product = products.find(p => p.id === id);
+  cart.push(product);
+  renderCart();
+}
+
+function renderCart() {
+  const container = document.getElementById('cart');
+  const totalEl = document.getElementById('total');
+  container.innerHTML = '';
+
+  let total = 0;
+
+  cart.forEach((item, index) => {
+    total += item.price;
+
+    const el = document.createElement('div');
+    el.className = 'flex justify-between items-center bg-white p-3 rounded-xl shadow-sm';
+    el.innerHTML = `
+      <p>${item.name}</p>
+      <div class="flex items-center gap-2">
+        <span>Rp ${item.price}</span>
+        <button onclick="removeItem(${index})" class="text-red-500">x</button>
+      </div>
+    `;
+    container.appendChild(el);
+  });
+
+  totalEl.innerText = 'Rp ' + total;
+}
+
+function removeItem(index) {
+  cart.splice(index, 1);
+  renderCart();
+}
+
+function checkout() {
+  if(cart.length === 0) {
+    alert('Keranjang kosong!');
+    return;
+  }
+
+  alert('Transaksi berhasil!');
+  cart = [];
+  renderCart();
+}
+
+renderProducts();
+</script></body>
+</html>
